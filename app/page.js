@@ -619,8 +619,8 @@ export default function Home() {
         {/* SCROLL TO TOP */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="fixed bottom-6 right-6 bg-indigo-600 text-white w-12 h-12
-      rounded-full flex items-center justify-center hover:bg-indigo-700 transition
+          className="fixed bottom-6 right-6 bg-black/85  text-white w-12 h-12
+      rounded-full flex items-center justify-center hover:bg-black/90 transition
       lg:hidden"
         >
           ↑
