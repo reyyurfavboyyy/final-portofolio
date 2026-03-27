@@ -27,7 +27,18 @@ export default function Home() {
   const [active, setActive] = useState("home");
 
   const scrollTo = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    const yOffset = -100; // jarak dari atas (biar ga ketutup navbar)
+    const y =
+      el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({
+      top: y,
+      behavior: "smooth",
+    });
+
     setActive(id);
   };
 
@@ -169,7 +180,7 @@ export default function Home() {
 
           {/* SOCIAL */}
           <div className="flex items-center gap-4 pt-4 text-xl">
-            <a className="text-ms">follow me: </a>
+            <a className="text-ms">Get in touch: </a>
             <a href="https://wa.me/6285171728902" className="hover:text-gray-500">
               <i className="fa-brands fa-whatsapp"></i>
             </a>
@@ -585,8 +596,9 @@ export default function Home() {
           </h3>
 
           {/* NAV */}
-          <nav className="flex justify-center gap-6 text-sm opacity-90">
-            <a href="#home" className="hover:opacity-70 transition">Home</a>
+          <nav className="
+          flex justify-center gap-6 text-sm opacity-90">
+            <a href="#home" className="hover:opacity-70 transition ">Home</a>
             <a href="#about" className="hover:opacity-70 transition">About</a>
             <a href="#education" className="hover:opacity-70 transition">Education</a>
             <a href="#projects" className="hover:opacity-70 transition">Projects</a>
