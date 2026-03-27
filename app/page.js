@@ -105,7 +105,7 @@ export default function Home() {
       {/* HERO */}
       <section
         id="home"
-        className="min-h-screen grid grid-cols-1 md:grid-cols-2 items-center gap-10 px-8 md:px-20 pt-32"
+        className="min-h-screen grid grid-cols-1 md:grid-cols-2 items-center gap-10 px-6 md:px-20 pt-32"
       >
         {/* LEFT CONTENT */}
         <motion.div
@@ -113,7 +113,7 @@ export default function Home() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="space-y-6 ps-10"
+          className="space-y-6 flex flex-col items-center md:items-start text-center md:text-left"
         >
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
             Hi, I'm Muhammad Rayhan Khadafi
